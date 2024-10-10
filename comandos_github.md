@@ -129,3 +129,4 @@ Escribe :wq y presiona Enter.
 git config --global core.editor "code --wait"
 
 >Esto hará que cada vez que Git necesite que edites algo, abra Visual Studio Code en lugar de Vim.
+
