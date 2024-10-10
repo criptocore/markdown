@@ -25,6 +25,12 @@
 - git add --all      # Agrega todos los cambios: nuevos, modificados y eliminados  
 - git commit -m "comentario" # Envía los archivos al repositorio local
 
+## REESCRIBIR UN COMMIT CONSERVANDO AUTOR, FECHA Y OTROS METADATOS
+
+- git add .
+- git commit --amend --no-edit  --> (--no-edit --> asegura que el mensaje del commit original se conserve sin cambios)
+- git push --force    --> si ya se habia hecho u push de este commit antes del amend. se necesita forzar el push al repositorio remoto
+
 
 ## ENLAZA REPOSITORIO LOCAL CON REPOSITORIO REMOTO (ENVÍA ARCHIVOS DE OTRA RAMA)
 
@@ -36,28 +42,16 @@
 
 ## CREACIÓN DE NUEVAS RAMAS
 
-- git branch rama2                   # Crea nueva rama
-- git branch                         # Ver todas las ramas
-- git checkout (rama elegida)         # Selecciona la rama para trabajar
-- git branch -m master main           # Cambia el nombre de master a main
+- git branch rama2                   --> Crea nueva rama
+- git branch                         --> Ver todas las ramas
+- git checkout (rama elegida)        --> Selecciona la rama para trabajar
+- git branch -m master main          --> Cambia el nombre de master a main
 
+### SUBIR NUEVA RAMA CREADA A REPOSITORIO (GITHUB)
 
-## RECUPERAR CUALQUIER RAMA CLONADA QUE TENGA NUESTRO REPOSITORIO REMOTO
-
-- git fetch                # Descarga las ramas pero no las muestra
-- git branch -r            # Muestra las ramas remotas
-
-
-## ELIMINAR RAMAS
-
-- git branch -d (rama a eliminar)           # Elimina una rama local
-- git push origin --delete (rama a eliminar) # Elimina una rama remota
-
-
-## ELIMINAR ARCHIVO DE CUALQUIER RAMA
-
-- git rm -r (archivo a borrar)
-
+- git add .
+- git commit -m "Descripción de los cambios en la nueva rama"
+- git push -u origin nombre_de_la_nueva_rama
 
 ## CLONAR REPOSITORIOS
 
@@ -67,10 +61,32 @@
 - git push --force origin main # Fuerza la subida de cambios locales al repo remoto
 
 
+## RECUPERAR CUALQUIER RAMA CLONADA QUE TENGA NUESTRO REPOSITORIO REMOTO
+
+- git branch -r            --> Muestra las ramas remotas disponibles en un proyecto
+- git fetch --all          --> Descarga todas las ramas remotas pero no las muestra
+- git branch -a            --> Lista todas las ramas locales y remotas
+- git checkout nombre_de_la_rama --> Elige la rama donde deseas trabajar
+
+
+## ELIMINAR RAMAS
+
+- git branch -d (rama a eliminar)              --> Elimina una rama local
+- git push origin --delete (rama a eliminar)   --> Elimina una rama remota
+
+
+## ELIMINAR ARCHIVO DE CUALQUIER RAMA
+
+- git rm -r (archivo a borrar)
+
 ## FUSIONAR RAMAS SECUNDARIAS CON RAMA PRINCIPAL O MASTER 
 
-- git checkout master        # Debemos estar en la rama principal
-- g- it merge rama2            # Fusiona la rama secundaria con la principal
+- git checkout main    --> Debemos estar en la rama principal
+- git checkout main    --> Es recomendable que la rama main este actualizada
+- git merge nombre_de_la_rama_secundaria  --> Fusiona la rama secundaria con la principal
+- Resolver posibles conflictos (git add . y git commit)
+- git push origin main --> Subir los cambios al repositorio remoto
+
 - git merge --no-ff rama2    # Fusiona cambios manteniendo ambas ramas y commits
 
 
