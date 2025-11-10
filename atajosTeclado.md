@@ -4,5 +4,6 @@
 - Esto duplica la linea de código seleccionadas
 ## alt + clic
 - Manteniendo presionado alt y con clic de mouse en varios puntos de lineas de codigo, puedes agregar cualquier caracter en todos los puntos marcados.m
-
+## aqui seguiremos enviando cambios a nuestro repo
+- asi 
 
