@@ -1,6 +1,7 @@
 # Atajos de teclado VSC
 
-## shift  + alt + flecha abajo --> ### esto duplica la linea de código
+## shift  + alt + flecha abajo
+- Esto duplica la linea de código
 alt --> Manteniendo presionado alt y con clic de mouse en varios puntos de lineas de codigo, puedes agregar cualquier caracter
 -----------------------------------------------------------------------------------------------------------------------------------
 >Archivo Json Snipet
